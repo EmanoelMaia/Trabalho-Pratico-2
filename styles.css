@@ -1,0 +1,230 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    margin-bottom: 10px;
+}
+
+.location {
+    font-size: 14px;
+    color: #666;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.social a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.followers {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.repositories,
+.suggested-content,
+.work-colleagues {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.repositories h2,
+.suggested-content h2,
+.work-colleagues h2 {
+    margin-bottom: 20px;
+}
+
+.repos-grid,
+.colleagues-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.repo,
+.colleague {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.repositories {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.repos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.repo {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.repo a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    height: 100%;
+}
+
+.repo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* .repo a:hover {
+    background-color: #f0f0f0;
+} */
+
+.repo .stars,
+.repo .forks {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.repo:hover {
+    transform: scale(1.05);
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile img {
+        margin-bottom: 10px;
+    }
+
+    .social {
+        justify-content: center;
+    }
+}
+
+/* Adicione estilos para o carrossel */
+.swiper-container {
+    width: 100%;
+    height: 300px;
+    /* ajuste conforme necessário */
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #333;
+}
+
+.swiper-pagination-bullet {
+    background: #333;
+}
